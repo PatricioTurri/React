@@ -1,15 +1,15 @@
-import CartWidget from "./CartWidget"
+import { Bike, Car, Home, LibraryBig } from "lucide-react"
+import { Link } from "react-router-dom"
+Bike
 
 function NavBar () {
     return (
-        <>
-        <h1>Buenas</h1>
-        <nav>
-            <a href="https://www.instagram.com/soymigrante_/">Instagram</a>
-            <a href="https://www.youtube.com/channel/UCGW3U0Tb5KXtq9BdS-9vuKg">YouTube</a>
-        </nav>
-        <CartWidget/>
-        </>
+            <nav className="flex items-center gap-4 text-xs text-current truncate">
+                <Link className="flex gap-1 text-xl text-center"to="/">Home {<Home/>}</Link>
+                <Link to="/catalogo" className="flex gap-1 text-xl text-center">Catalogo {<LibraryBig/>}</Link>
+                <Link to="/category/motorcycle"className="flex gap-1 text-xl text-center">Motos {<Bike/>}</Link>
+                <Link to="/category/vehicle" className="flex gap-1 text-xl text-center">Vehículos {<Car/>}</Link>
+            </nav>
     )
 }
 

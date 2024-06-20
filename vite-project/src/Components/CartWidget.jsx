@@ -1,9 +1,11 @@
+import {ShoppingCart} from "lucide-react"
+
 function CartWidget (){
     return (
-        <>
-        <img src="imagen1.png" alt="img" />
-        <p>0</p>
-        </>
+        <div className="flex items-center gap-2 text-current truncate text-l">
+            <p className="text-2xl ">0</p>
+            <ShoppingCart/>
+        </div>
     )
 }
 
